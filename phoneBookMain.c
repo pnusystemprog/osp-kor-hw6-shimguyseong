@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include "phone.h"
 
+char password[] = "qwerty1234";
+
 void registerPhoneData();
 void printAll();
 void searchByName();
 void deleteByName();
 
 static int count_service = 0;	// Total number of service requests
-
+int userNo = 0;
+int rmBuffer=0;
 
 int main()
 {
@@ -15,7 +18,7 @@ int main()
 	do
 	{
         printf("============ Telephone Book Management ============");
-        printf("\n <<<1. Register\t 2. Print All \t 3. Search by ID \t 4. Delete \t 5. Exit >>>\n");
+        printf("\n <<<1. Register\t 2. Print All \t 3. Search \t 4. Delete \t 5. Exit >>>\n");
         printf(" Please enter your service number (1-5)> ");
 		scanf("%d", &service);
 
@@ -30,38 +33,3 @@ int main()
 	return 0;
 }
 
-/*****************
-** Your code..
-** This function should be implemented in register.c
-*************************/
-void registerPhoneData()
-{
-    printf("Registration\n");
-}
-
-/*****************
-** Your code..
-** This function should be implemented in search.c
-*************************/
-void printAll()
-{
-    printf("Print all contants in the PhoneBook\n");
-}
-
-/*****************
-** Your code..
-** This function should be implemented in search.c
-*************************/
-void searchByName()
-{
-    printf("Search by Name\n");
-}
-
-/*****************
-** Your code..
-** This function should be implemented in delete.c
-*************************/
-void deleteByName()
-{
-    printf("Deletion is done\n");
-}
